@@ -1,6 +1,6 @@
-*/__pycache__/**
-*/media/**
-*/slides/**
-*/vicephec_talk_assets/**
-*/*.swp
-*/*.html
+__pycache__/**
+media/**
+slides/**
+vicephec_talk_assets/**
+*.swp
+*.html
