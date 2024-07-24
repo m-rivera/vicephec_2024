@@ -134,6 +134,6 @@ class Examples(ThreeDSlide):
 
         algo_text = Tex("Algorithms").move_to(top_left,aligned_edge=LEFT)
         self.play(*[FadeOut(mob) for mob in self.mobjects])
-        self.wipe(Group(vib_text,harm_plot,morse_plot,labels,ax,diatomic,dot_track),algo_text)
+        self.play(Write(algo_text))
         self.next_slide()
-        self.play(algo_text)
+        self.play(*[FadeOut(mob) for mob in self.mobjects])
