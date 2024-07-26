@@ -17,6 +17,8 @@ class Demo(ThreeDSlide):
     def construct(self):
 
         section_demo = Tex("3. Demonstration",font_size=60)
+        self.play(Write(section_demo))
+        self.next_slide()
 
         code_listing = Code(
                 "demo_code.py",

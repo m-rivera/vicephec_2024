@@ -16,6 +16,7 @@ grey = "#8e8e8e"
 class Background(ThreeDSlide):
     def construct(self):
 
+        #Tex.set_default(tex_template=TexFontTemplates.helvetica_fourier_it)
         sub_font_size = 40
         #Tex.set_default(font="Nimbus Sans")
 
@@ -40,16 +41,20 @@ class Background(ThreeDSlide):
 
         self.next_slide()
         title = Tex("Precise Animations for the STEM Classroom",font_size=60)
+        ucl_logo = SVGMobject("img/UCL.svg",height=0.7).move_to(UP*3+RIGHT*5)
+        cer_logo = ImageMobject("img/UCL_CER_Logo.png").scale(0.2).next_to(ucl_logo,DOWN)
+
         self.play(Write(title))
 
         subtitle = Tex("ViCEPHEC 2024, University of Surrey, Miguel Rivera",font_size=sub_font_size).next_to(title,DOWN)
         self.play(Write(subtitle))
 
+        self.play(FadeIn(ucl_logo),FadeIn(cer_logo))
         # TOC
         self.next_slide()
 
         section_back = Tex("1. Background",font_size=60)
-        self.wipe(Group(title,subtitle),section_back)
+        self.wipe(Group(title,subtitle,ucl_logo,cer_logo),section_back)
 
         self.next_slide()
         # visualisation
