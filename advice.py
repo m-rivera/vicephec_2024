@@ -115,9 +115,11 @@ class Advice(ThreeDSlide):
 
         self.wait(0.5)
         self.next_slide()
-        shout_out = Tex(r"Python in Chemistry: pythoninchemistry.org",font_size=sub_font_size).move_to(top_left,aligned_edge=LEFT).shift(DOWN*4)
-        source = Tex(r"Presentation source code: github.com/m-rivera/vicephec\_2024",font_size=sub_font_size).move_to(top_left,aligned_edge=LEFT).shift(DOWN*5)
-        self.play(Write(shout_out),Write(source))
+        shout_out = Tex(r"$\cdot$Python in Chemistry: pythoninchemistry.org",font_size=sub_font_size).move_to(top_left,aligned_edge=LEFT).shift(DOWN*4)
+        nature_ref = Tex(r"$\cdot$A. R. McCluskey, M. Rivera and A. S. J. S. Mey, Digital skills in chemical education, \textit{Nat. Chem.}, 2024",font_size=sub_font_size).move_to(top_left,aligned_edge=LEFT).shift(DOWN*5)
+        source = Tex(r"$\cdot$Presentation source code: github.com/m-rivera/vicephec\_2024",font_size=sub_font_size).move_to(top_left,aligned_edge=LEFT).shift(DOWN*6)
+
+        self.play(Write(shout_out),Write(nature_ref),Write(source))
 
         self.wait(3)
         self.next_slide()

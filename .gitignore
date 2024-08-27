@@ -2,5 +2,6 @@ __pycache__/**
 media/**
 slides/**
 vicephec_talk_assets/**
+vicephec_talk_2024_assets/**
 *.swp
 *.html
